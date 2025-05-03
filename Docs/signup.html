@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/input.css" />
+    <style>
+      .animate-slide-in {
+        animation: slideInRight 2s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative min-h-screen">
+      <!-- background layer -->
+      <div
+        class="absolute inset-0 bg-[url('../src/images/login.jpg')] bg-cover bg-center opacity-85 -z-10"
+      ></div>
+
+      <!-- content -->
+      <div
+        class="flex flex-col sm:flex-row min-h-[90vh] justify-center items-center p-4 sm:p-6"
+      >
+        <!-- Welcome text -->
+        <div class="text-white mb-8 sm:mb-0 sm:mr-6 md:mr-10">
+          <h2
+            class="text-4xl sm:text-5xl md:text-[64px] font-normal max-w-[300px] sm:max-w-[400px] md:max-w-[512px] font-myfont mb-4 sm:mb-6 md:mb-8 animate-slide-in text-center sm:text-left"
+          >
+            Welcome to Furnify
+          </h2>
+          <p
+            class="max-w-[300px] sm:max-w-[400px] md:max-w-[648px] font-medium text-lg sm:text-xl md:text-2xl text-center sm:text-left"
+          >
+            Welcome to your favorite furniture destination, where comfort meets
+            style. Discover elegant pieces designed to bring warmth and beauty
+            to your home.
+          </p>
+        </div>
+
+        <!-- Login form -->
+        <div
+          class="bg-white/35 w-full sm:w-[450px] md:w-[604px] rounded-lg min-h-[490px] sm:min-h-[520px] md:min-h-[590px] flex flex-col justify-start"
+        >
+          <h3
+            class="text-chocletcolor text-2xl sm:text-3xl md:text-4xl font-semibold text-center mt-4 sm:mt-5 md:mt-6"
+          >
+            Sign Up
+          </h3>
+
+          <div
+            class="flex flex-col gap-3 w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-10"
+          >
+            <form onsubmit="return validateForm('signup')">
+              <!-- Email input -->
+              <div class="relative mb-6 sm:mb-8">
+                <i
+                  class="fa-regular fa-envelope absolute left-2 sm:left-4 pl-1 sm:pl-3 top-1/2 -translate-y-1/2 text-mygray text-sm sm:text-base"
+                ></i>
+                <input
+                  id="email"
+                  type="email"
+                  class="rounded-lg sm:rounded-xl h-12 sm:h-16 border-firstmainColor border-2 pl-8 sm:pl-14 w-full font-medium sm:font-bold text-sm sm:text-base"
+                  placeholder="Enter your Email"
+                />
+                <div
+                  id="emailError"
+                  class="text-red-700 text-sm sm:text-lg font-semibold mt-1 ml-2"
+                ></div>
+              </div>
+
+              <!-- Password input -->
+              <div class="relative mb-6 sm:mb-8">
+                <i
+                  class="fa-regular fa-eye absolute left-2 sm:left-4 pl-1 sm:pl-3 top-1/2 -translate-y-1/2 text-mygray text-sm sm:text-base"
+                ></i>
+                <input
+                  id="password"
+                  type="password"
+                  class="rounded-lg sm:rounded-xl h-12 sm:h-16 border-firstmainColor border-2 pl-8 sm:pl-14 w-full font-medium sm:font-bold text-sm sm:text-base"
+                  placeholder="Enter your Password"
+                />
+                <div
+                  id="passwordError"
+                  class="text-red-700 text-sm sm:text-lg font-semibold mt-1 ml-2"
+                ></div>
+              </div>
+
+              <!-- confirm password -->
+              <div class="relative mb-6 sm:mb-8">
+                <i
+                  class="fa-regular fa-eye absolute left-2 sm:left-4 pl-1 sm:pl-3 top-1/2 -translate-y-1/2 text-mygray text-sm sm:text-base"
+                ></i>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  class="rounded-lg sm:rounded-xl h-12 sm:h-16 border-firstmainColor border-2 pl-8 sm:pl-14 w-full font-medium sm:font-bold text-sm sm:text-base"
+                  placeholder="Confirm your Password"
+                />
+                <div
+                  id="confirmPasswordError"
+                  class="text-red-700 text-sm sm:text-lg font-semibold mt-1 ml-2"
+                ></div>
+              </div>
+              <!-- Submit button -->
+              <button
+                type="submit"
+                class="bg-[#8F7332] text-white font-medium sm:font-bold text-sm sm:text-base p-2 sm:p-3 rounded-lg sm:rounded-xl cursor-pointer w-full"
+              >
+                Sign up
+              </button>
+            </form>
+          </div>
+          <!-- oR line -->
+          <div
+            class="flex items-center justify-center w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-9 mb-1"
+          >
+            <hr class="w-24 sm:w-36 border-t-2 border-white mx-2 sm:mx-4" />
+            <span
+              class="text-chocletcolor font-medium sm:font-bold text-sm sm:text-base"
+              >OR</span
+            >
+            <hr class="w-24 sm:w-36 border-t-2 border-white mx-2 sm:mx-4" />
+          </div>
+
+          <!-- Google login & signup -->
+          <div
+            class="flex flex-col items-center justify-center w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-3"
+          >
+            <!-- Google login button -->
+            <div
+              class="flex items-center sm:gap-3 cursor-pointer transition-colors sm:py-2 px-4 sm:px-5"
+            >
+              <svg
+                width="20"
+                height="20"
+                class="w-5 h-5 sm:w-6 sm:h-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                  fill="#FBC02D"
+                />
+                <path
+                  d="M3.15308 7.3455L6.43858 9.755C7.32758 7.554 9.48058 6 12.0001 6C13.5296 6 14.9211 6.577 15.9806 7.5195L18.8091 4.691C17.0231 3.0265 14.6341 2 12.0001 2C8.15908 2 4.82808 4.1685 3.15308 7.3455Z"
+                  fill="#E53935"
+                />
+                <path
+                  d="M11.9999 22.0001C14.5829 22.0001 16.9299 21.0116 18.7044 19.4041L15.6094 16.7851C14.6054 17.5456 13.3574 18.0001 11.9999 18.0001C9.39891 18.0001 7.19041 16.3416 6.35841 14.0271L3.09741 16.5396C4.75241 19.7781 8.11341 22.0001 11.9999 22.0001Z"
+                  fill="#4CAF50"
+                />
+                <path
+                  d="M21.8055 10.0415L21.7975 10H21H12V14H17.6515C17.2555 15.1185 16.536 16.083 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                  fill="#1565C0"
+                />
+              </svg>
+              <p
+                class="font-medium sm:font-bold text-sm sm:text-base text-[#1D1D1D]"
+              >
+                Continue with Google Account
+              </p>
+            </div>
+
+            <p class="font-medium sm:font-bold text-sm sm:text-base mt-0">
+              <a href="login.html" class="text-[#A05035] hover:underline">
+                Log In
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../src/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  
+@keyframes slideInLeft {
+  20% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bounceDownTwice {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  85% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
