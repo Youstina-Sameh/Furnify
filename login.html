@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sign up</title>
+    <title>log in</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -11,8 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="../dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../src/css/input.css" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/input.css" />
     <style>
       .animate-slide-in {
         animation: slideInRight 2s ease-out forwards;
@@ -48,18 +48,18 @@
 
         <!-- Login form -->
         <div
-          class="bg-white/35 w-full sm:w-[450px] md:w-[604px] rounded-lg min-h-[490px] sm:min-h-[520px] md:min-h-[590px] flex flex-col justify-start"
+          class="bg-white/35 w-full sm:w-[450px] md:w-[604px] rounded-lg min-h-[480px] sm:min-h-[500px] md:min-h-[580px] flex flex-col justify-start"
         >
           <h3
             class="text-chocletcolor text-2xl sm:text-3xl md:text-4xl font-semibold text-center mt-4 sm:mt-5 md:mt-6"
           >
-            Sign Up
+            Login
           </h3>
 
           <div
-            class="flex flex-col gap-3 w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-10"
+            class="flex flex-col gap-3 w-full max-w-[px500] px-4 sm:px-8 md:px-10 mx-auto mt-10"
           >
-            <form onsubmit="return validateForm('signup')">
+            <form onsubmit="return validateForm('signin')">
               <!-- Email input -->
               <div class="relative mb-6 sm:mb-8">
                 <i
@@ -94,34 +94,18 @@
                 ></div>
               </div>
 
-              <!-- confirm password -->
-              <div class="relative mb-6 sm:mb-8">
-                <i
-                  class="fa-regular fa-eye absolute left-2 sm:left-4 pl-1 sm:pl-3 top-1/2 -translate-y-1/2 text-mygray text-sm sm:text-base"
-                ></i>
-                <input
-                  id="confirmPassword"
-                  type="password"
-                  class="rounded-lg sm:rounded-xl h-12 sm:h-16 border-firstmainColor border-2 pl-8 sm:pl-14 w-full font-medium sm:font-bold text-sm sm:text-base"
-                  placeholder="Confirm your Password"
-                />
-                <div
-                  id="confirmPasswordError"
-                  class="text-red-700 text-sm sm:text-lg font-semibold mt-1 ml-2"
-                ></div>
-              </div>
               <!-- Submit button -->
               <button
                 type="submit"
                 class="bg-[#8F7332] text-white font-medium sm:font-bold text-sm sm:text-base p-2 sm:p-3 rounded-lg sm:rounded-xl cursor-pointer w-full"
               >
-                Sign up
+                Login Now
               </button>
             </form>
           </div>
           <!-- oR line -->
           <div
-            class="flex items-center justify-center w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-9 mb-1"
+            class="flex items-center justify-center w-full max-w-[500px] px-4 sm:px-8 md:px-10 mx-auto mt-16 mb-1"
           >
             <hr class="w-24 sm:w-36 border-t-2 border-white mx-2 sm:mx-4" />
             <span
@@ -172,8 +156,9 @@
             </div>
 
             <p class="font-medium sm:font-bold text-sm sm:text-base mt-0">
-              <a href="login.html" class="text-[#A05035] hover:underline">
-                Log In
+              Are You New?
+              <a href="signup.html" class="text-[#A05035] hover:underline">
+                Sign up
               </a>
             </p>
           </div>

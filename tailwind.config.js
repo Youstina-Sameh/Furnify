@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./docs/**/*.html", "./src/**/*.{html,js}"],
+  content: ["./*.html", "./src/**/*.{html,js}"],
   theme: {
     extend: {
       backgroundImage: {
-        'hero-img': "url('/src/images/heroSection.jpg')",
+        'hero-img': "url('../src/images/heroSection.jpg')",
       },
       fontFamily: {
         myfont: 'Inknut Antiqua',

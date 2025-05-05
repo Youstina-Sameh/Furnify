@@ -943,6 +943,10 @@ video {
   max-width: 402px;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
 .max-w-\[502px\] {
   max-width: 502px;
 }
@@ -951,20 +955,16 @@ video {
   max-width: 700px;
 }
 
+.max-w-\[px500\] {
+  max-width: px500;
+}
+
 .max-w-full {
   max-width: 100%;
 }
 
 .max-w-lg {
   max-width: 32rem;
-}
-
-.max-w-\[px500\] {
-  max-width: px500;
-}
-
-.max-w-\[500px\] {
-  max-width: 500px;
 }
 
 .-translate-y-1\/2 {
@@ -1222,12 +1222,12 @@ video {
   background-image: url('../src/images/graySalon.jpg');
 }
 
-.bg-\[url\(\'\.\.\/src\/images\/heroSection\.jpg\'\)\] {
-  background-image: url('../src/images/heroSection.jpg');
-}
-
 .bg-\[url\(\'\.\.\/src\/images\/login\.jpg\'\)\] {
   background-image: url('../src/images/login.jpg');
+}
+
+.bg-hero-img {
+  background-image: url('../src/images/heroSection.jpg');
 }
 
 .bg-cover {
@@ -1817,12 +1817,12 @@ video {
     height: 750px;
   }
 
-  .sm\:min-h-\[520px\] {
-    min-height: 520px;
-  }
-
   .sm\:min-h-\[500px\] {
     min-height: 500px;
+  }
+
+  .sm\:min-h-\[520px\] {
+    min-height: 520px;
   }
 
   .sm\:w-36 {
